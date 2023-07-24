@@ -11,7 +11,7 @@ const { title } = Astro.props;
 ---
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="description" content="Astro description">
@@ -20,7 +20,7 @@ const { title } = Astro.props;
 		<meta name="generator" content={Astro.generator} />
 		<title>{title}</title>
 	</head>
-	<body>
+	<body class="overflow-hidden h-full m-0 p-0">
 		<MenuItemContainerView>
 			{
 				menuItems.map(item => <MenuItemView {... item} />)
