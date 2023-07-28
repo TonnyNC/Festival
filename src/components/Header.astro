@@ -1,11 +1,22 @@
+---
+import menuItems from "../data/menuItemsData";
+import MenuItemView from "./MenuItemView.astro";
 
-    <div class="">
-        <video class="object-cover" src="/assets/hero.mp4" autoplay loop></video>
-    </div>
-    <div class="flex absolute w-full z-50 sm:top-[30%] lg:top-[50%] place-content-center ">
-        <img class="w-[25%]" src="/assets/hero-logo.webp" alt="Logo"/>
-    </div>
+---
 
-<style>
+<header class="flex items-centera py-8 fixed w-screen justify-between text-gray-100 z-50">
+    <nav class="flex px-8">
+        <a href="/" class="text-4xl">ARTKADIA</a>
+    </nav>
+    <nav>
+        <ul class="flex text-3xl [&>li>a]:inline-block [&>li>a]:px-4 [&>li>a]:py-2">
+            {
+                menuItems.map(item => <MenuItemView {... item} />)
+            }
+        </ul>
+      </nav>
+      <nav class="flex justify-end px-8">
+        <a href="/">S</a>
+      </nav>
 
-</style>
+</header>

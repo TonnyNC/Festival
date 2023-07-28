@@ -1,61 +1,28 @@
 ---
+import Header from "../components/Header.astro";
+import Slider from "../components/Slider.astro";
 import Layout from "../layouts/Layout.astro";
+import gremioinfo from "../data/gremiosData";
+import Gremio_info from "../components/Gremio_info.astro";
+import Card from "../components/Card.astro";
+
+const content = await Astro.glob('./gremios_info/*.md');
 
 ---
 
 <Layout title="Gremios">
-<div class="landing-page">
-    <section class="section" id="gremios">
-        <div class="content">
-          <!-- <img src="ruta/de/la/imagen-gremios.jpg" alt="Imagen de gremios"> -->
-          <p>Texto descriptivo de los Gremios.</p>
-        </div>
-      </section>
+  <div class="">
+    <section class="bg-black h-screen w-screen text-center overflow-hidden ">
+      <div class="absolute h-screen w-screen place-content-center z-0">
+        <video class="blur-sm object-cover w-screen h-screen max-w-none " src="/assets/hero.mp4" autoplay loop></video>
+      </div>
+    </section>
+    <section class="absolute overflow-hidden grid grid-rows-2 grid-flow-col my-0 z-20 top-[25%] w-screen justify-center align-middle 
+                    sm:grid-flow-row sm:grid-cols-2">
+        <Slider/>
+        <Gremio_info/>
+    </section>
+  </div>
+  
 
     </Layout>
-
-      <style>
-        /* Estilos de la barra de navegación */
-        .navbar {
-          background-color: #333;
-          color: #fff;
-          padding: 10px;
-        }
-      
-        .navbar ul {
-          list-style-type: none;
-          display: flex;
-          justify-content: center;
-        }
-      
-        .navbar li {
-          margin: 0 10px;
-        }
-      
-        .navbar a {
-          color: #fff;
-          text-decoration: none;
-        }
-      
-        /* Estilos para las secciones */
-        .section {
-          padding: 50px;
-        }
-      
-        .section .content {
-          text-align: center;
-        }
-      
-        .section h1 {
-          font-size: 32px;
-          margin-bottom: 20px;
-        }
-      
-        .section p {
-          font-size: 18px;
-        }
-      
-        .section img {
-          max-width: 100%;
-        }
-      </style>

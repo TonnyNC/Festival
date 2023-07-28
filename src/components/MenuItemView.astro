@@ -6,6 +6,6 @@ interface Props extends MenuItem{};
 const {title, url} = Astro.props;
 ---
 
-<li>
+<li class="uppercase rounded-lg mx-6 border-[5px] border-white align-middle hover:bg-white hover:text-gray-800 ease-in duration-200 transition-all">
     <a href={url}>{title}</a>
 </li>
